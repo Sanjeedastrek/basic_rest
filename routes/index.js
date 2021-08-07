@@ -33,7 +33,7 @@ router.get('/comment/new', (req, res) => {
   res.render('newComment');
 })
 
-//save comment
+//save comment 
 router.post('/comment/new', (req, res) => {
   let { firstName, comment } = req.body;
   //res.send(firstName);
@@ -41,7 +41,7 @@ router.post('/comment/new', (req, res) => {
   res.redirect('/');
 })
 
-//show comment form
+//show comment form 
 router.get('/comment/:id', (req, res) => {
   let { id } = req.params;
   // const found = array1.find(element => element > 10);
@@ -49,7 +49,7 @@ router.get('/comment/:id', (req, res) => {
   res.render('showComment', { outputComment });
 })
 
-// edit comment form
+// edit comment form 
 router.get('/comment/:id/edit', (req, res) => {
   let { id } = req.params;
 
@@ -58,7 +58,7 @@ router.get('/comment/:id/edit', (req, res) => {
   //res.send(id) //working
 })
 
-//save after edit
+//save after edit 
 router.patch('/comment/:id/edit', (req, res) => {
   let { id } = req.params;
   let { firstName, comment } = req.body;
@@ -74,7 +74,7 @@ router.patch('/comment/:id/edit', (req, res) => {
 
 })
 
-//delete comment
+//delete comment (PROBLEM)
 router.delete('/comment/:id', (req, res) => {
   let { id } = req.params;
 
@@ -89,9 +89,4 @@ router.delete('/comment/:id', (req, res) => {
 
 })
 
-// app.delete('/comments/:id', (req, res) => {
-//   const { id } = req.params;
-//   comments = comments.filter(c => c.id !== id);
-//   res.redirect('/comments');
-// })
 module.exports = router;
