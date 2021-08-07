@@ -1,0 +1,18 @@
+<%- include ('./partials/header') %>
+
+<h1>Hello, please comment</h1>
+
+<% if (comments.length===0) { %>
+<p>Sorry no comments posted</p>
+<% } else { %>
+<ul></ul>
+<% for (let c of comments){ %>
+<li><%= c.firstName %></li>
+<li><%= c.comment %></li>
+<a href='/comment/<%=c.id %>'>More</a>
+<hr />
+<% }} %>
+</ul>
+<a href='/comment/new'>Create new</a>
+
+<%- include ('./partials/footer') %>

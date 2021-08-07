@@ -1,0 +1,18 @@
+<form method='POST' action='/comment/<%= outputComment.id %>/edit?_method=PATCH'>
+    <div class="container">
+        <div class="form-row">
+            <div class="col-md-4 m-3">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" name='firstName' value="<%= outputComment.firstName %>">
+            </div>
+            <div class="col-md-4 m-3">
+                <label for="comment">Comment</label>
+                <textarea class="form-control" name='comment' id="comment" rows="3" ><%= outputComment.comment %></textarea>
+            </div>
+       
+        </div>
+    </div>
+    <button type='submit'>Submit comment</button>
+    </div>
+</form>    
+

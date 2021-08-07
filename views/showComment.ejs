@@ -1,0 +1,8 @@
+First name: <%= outputComment.firstName %>
+Comment: <%= outputComment.comment %>
+
+<a href='/comment/<%= outputComment.id %>/edit'>Edit this </a>
+
+<form method='POST' action='/comment/<%= outputComment.id %>?_method=DELETE'>
+    <button>Delete</button>
+</form>
