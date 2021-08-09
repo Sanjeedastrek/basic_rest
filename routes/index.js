@@ -5,7 +5,7 @@ var router = express.Router();
 
 //const comments = [];
 
-const comments = [
+let comments = [
   // {
   //   id: '71de83f6-2832-45ae-b126-2b44cabb99ed',
   //   firstName: 'dsdsdsdds',
